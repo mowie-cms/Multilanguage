@@ -71,11 +71,17 @@ class lang
 		//If Langueage exists...
 		if (array_key_exists($this->lang, $this->langfiles))
 		{
-			//...and a value for the corresponding key
+			$array_key = array_search($identifier, $this->langfiles[$this->default]['langstrings']);
+			//...and a value for the corresponding key...
 			if (array_key_exists($identifier, $this->langfiles[$this->lang]['langstrings']))
 			{
-				//Outpout it
+				//Output it
 				return $this->langfiles[$this->lang]['langstrings'][$identifier];
+			}//...or find String by the defaults languagestring
+			elseif($array_key !== false)
+			{
+				//Output it
+				return $this->langfiles[$this->lang]['langstrings'][$array_key];
 			}
 			else
 			{
@@ -91,7 +97,8 @@ class lang
 				}
 			}
 		}
-		else//Fallback to the default language
+		//Fallback to the default language
+		else
 		{
 			if (array_key_exists($identifier, $this->langfiles[$this->default]['langstrings']))
 			{

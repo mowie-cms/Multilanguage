@@ -6,8 +6,9 @@ $lang->setLangFolder('langs/');
 $lang->setLang('lang.es.php', 'es');
 
 echo $lang->get('Home').'<br/>';
-echo $lang->get('something');
+echo $lang->get('something').'<br/>';
 
+echo $lang->get('Home is where your wifi connects automatically').'<br/>';//Get Languagestring by Languagestring
 
 $lang->setLang('lang.de_extra.php', 'de');
 echo $lang->get('fail');

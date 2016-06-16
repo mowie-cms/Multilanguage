@@ -28,7 +28,7 @@ To output a string, simply run the following command:
 $lang->get($identifier);
 $lang->get('Home');
 ```
-Where `$identifier` is the Key _**OR**_ the value defined in the file.
+Where `$identifier` is the Key _**OR**_ the value defined in the default's langfile.
 
 ##Reserved Identifiers
 

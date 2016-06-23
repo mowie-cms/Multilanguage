@@ -14,6 +14,12 @@ class lang
 		$this->langfiles = [];
 	}
 
+	//Change the current Language
+	function setCurrentLang($lang)
+	{
+		$this->lang = $lang;
+	}
+
 	//Get Langfiles by Folder
 	public function setLangFolder($folder)
 	{

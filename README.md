@@ -8,7 +8,7 @@ A Class which takes care of deploying your site in multiple languages.
 $lang = new lang($defaultLanguage);
 ```
 
-The default language, which will be used, if the users language is not found, is english. However, you can change this to any language you want.
+The default language, which will be used if the users language is not found, is english. However, you can change this to any language you want.
 
 ```php
 $lang->setLangFolder('../langs');
@@ -21,14 +21,22 @@ For example `lang.en.php`.
 
 The script will find the file and use it.
 
-You can also define multiple langfiles to get the strings of (see example.php)
+You can also define multiple langfiles to get the strings of (see example.php).
 
-To output a string, simply run the following command:
+To output a string, simply use the following command:
 ```php
 $lang->get($identifier);
 $lang->get('Home');
 ```
 Where `$identifier` is the Key _**OR**_ the value defined in the default's langfile.
+
+###Change the displayed language
+
+You can change the displayed language to one the user selects. To do this, use this command:
+
+```php
+$lang->setCurrentLang($lang);
+```
 
 ##Reserved Identifiers
 

@@ -117,4 +117,10 @@ class lang
 			}
 		}
 	}
+
+	//Set Langstrings
+	function set($string, $identifier, $lang)
+	{
+		$this->langfiles[$lang]['langstrings'][$identifier] = $string;
+	}
 }

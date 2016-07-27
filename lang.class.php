@@ -1,5 +1,4 @@
 <?php
-
 class lang
 {
 	private $lang;
@@ -10,7 +9,11 @@ class lang
 	function __construct($default = 'en')
 	{
 		$this->default = $default;
-		$this->lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+		$this->lang = 'en';
+        if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
+        {
+            $this->lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+        }
 		$this->langfiles = [];
 	}
 
@@ -124,3 +127,4 @@ class lang
 		$this->langfiles[$lang]['langstrings'][$identifier] = $string;
 	}
 }
+?>

@@ -14,10 +14,7 @@ echo $lang->get('Home is where your wifi connects automatically').'<br/>';//Get 
 $lang->setLang('examples/lang.de_extra.php', 'de');
 echo $lang->get('fail');
 
-echo '<pre>';
-print_r($lang->getAll());
-echo '</pre>';
-
 $lang->set('Test in english', 'test', 'en');
 $lang->set('Test auf Deutsch', 'test', 'de');
 echo $lang->get('test');
+?>

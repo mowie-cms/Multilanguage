@@ -1,5 +1,7 @@
 <?php
 
+namespace lang;
+
 class lang
 {
 	private $lang;
